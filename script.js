@@ -99,3 +99,131 @@ button.addEventListener("click",function(){
 });
 
 });
+// ===========================
+// Favorites System
+// ===========================
+
+let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+
+const favoriteButtons =
+document.querySelectorAll(".favorite");
+
+
+favoriteButtons.forEach(function(button){
+
+button.addEventListener("click",function(){
+
+let app = this.dataset.app;
+
+
+if(favorites.includes(app)){
+
+favorites = favorites.filter(item => item !== app);
+
+this.innerHTML = "♡";
+
+}else{
+
+favorites.push(app);
+
+this.innerHTML = "♥";
+
+}
+
+
+localStorage.setItem(
+"favorites",
+JSON.stringify(favorites)
+);
+
+
+});
+
+});
+
+
+// ===========================
+// Download Counter
+// ===========================
+
+
+const downloadButtons =
+document.querySelectorAll(".download");
+
+
+downloadButtons.forEach(function(button){
+
+
+button.addEventListener("click",function(){
+
+
+let count =
+localStorage.getItem("downloads") || 0;
+
+
+count++;
+
+
+localStorage.setItem(
+"downloads",
+count
+);
+
+
+});
+
+
+});
+
+
+// ===========================
+// Apps Counter
+// ===========================
+
+
+const appsCounter =
+document.getElementById("appsCount");
+
+
+if(appsCounter){
+
+appsCounter.innerHTML =
+document.querySelectorAll(".card").length;
+
+}
+
+
+// ===========================
+// Smooth Page Animation
+// ===========================
+
+
+const cardsAnimation =
+document.querySelectorAll(".card");
+
+
+cardsAnimation.forEach(function(card,index){
+
+card.style.animationDelay =
+(index * 0.1)+"s";
+
+
+card.classList.add("show");
+
+
+});
+
+
+// ===========================
+// Welcome Message
+// ===========================
+
+
+setTimeout(function(){
+
+console.log(
+"Welcome to KAMOHACK STORE 🚀"
+);
+
+},3000);
