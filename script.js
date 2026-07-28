@@ -227,3 +227,54 @@ console.log(
 );
 
 },3000);
+// ===========================
+// Load Apps From JSON
+// ===========================
+
+const appsContainer = document.querySelector(".apps");
+
+if(appsContainer){
+
+fetch("apps.json")
+
+.then(response => response.json())
+
+.then(apps => {
+
+    appsContainer.innerHTML = "";
+
+    apps.forEach(app => {
+
+        const card = document.createElement("div");
+
+        card.className = "card";
+
+        card.innerHTML = `
+
+        <img src="${app.icon}">
+
+        <h3>${app.name}</h3>
+
+        <p>الإصدار: ${app.version}</p>
+
+        <p>الحجم: ${app.size}</p>
+
+        <a href="${app.file}">
+        تحميل IPA
+        </a>
+
+        `;
+
+        appsContainer.appendChild(card);
+
+    });
+
+})
+
+.catch(error => {
+
+console.log("خطأ في تحميل التطبيقات:", error);
+
+});
+
+}
