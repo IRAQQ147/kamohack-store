@@ -1,259 +1,129 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KAMOHACK STORE</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins,sans-serif;
-}
-
 body{
-
-background:#070b16;
-overflow-x:hidden;
+margin:0;
+font-family:'Cairo',sans-serif;
+background:#0d1117;
 color:white;
-
 }
-
-body::before{
-
-content:'';
-position:fixed;
-width:300%;
-height:300%;
-background:
-radial-gradient(circle,#00ffe555 0%,transparent 20%),
-radial-gradient(circle,#00aaff33 0%,transparent 25%);
-animation:bgMove 18s linear infinite;
-z-index:-1;
-
-}
-
-@keyframes bgMove{
-
-0%{transform:translate(-20%,-20%) rotate(0deg);}
-100%{transform:translate(-10%,-10%) rotate(360deg);}
-
-}
-
-header{
-
-padding:25px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-
-backdrop-filter:blur(20px);
-
-}
-
-.logo{
-
-font-size:32px;
-font-weight:700;
-color:#00fff2;
-text-shadow:0 0 15px cyan;
-
-}
-
-.search{
-
-width:320px;
-padding:12px;
-border:none;
-outline:none;
-border-radius:30px;
-background:#111827;
-color:white;
-
-}
-
-.hero{
-
-height:300px;
-
-display:flex;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-
-}
-
-.hero h1{
-
-font-size:60px;
-color:#00fff2;
-text-shadow:0 0 20px cyan;
-
-}
-
-.hero p{
-
-opacity:.8;
-margin-top:10px;
-
-}
-
-.apps{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-padding:40px;
-
-}
-
-.card{
-
-background:#111827;
-border-radius:25px;
-padding:20px;
-transition:.4s;
-box-shadow:0 0 20px rgba(0,255,255,.1);
-
-}
-
-.card:hover{
-
-transform:translateY(-12px);
-
-box-shadow:
-0 0 20px cyan,
-0 0 50px cyan;
-
-}
-
-.icon{
-
-width:90px;
-height:90px;
-border-radius:25px;
-margin:auto;
-
-background:linear-gradient(45deg,#00fff2,#0066ff);
-
-}
-
-.card h2{
-
-margin-top:15px;
-text-align:center;
-
-}
-
-.card p{
-
-font-size:14px;
-opacity:.8;
-margin-top:10px;
-
-text-align:center;
-
-}
-
-.download{
-
-margin-top:20px;
-
-display:block;
-
-text-align:center;
-
-padding:12px;
-
-background:linear-gradient(45deg,#00fff2,#0099ff);
-
-border-radius:15px;
-
-color:white;
-
-text-decoration:none;
-
-font-weight:bold;
-
-transition:.3s;
-
-}
-
-.download:hover{
-
-transform:scale(1.05);
-
-}
-
-footer{
-
-padding:40px;
-text-align:center;
-opacity:.7;
-
-}
-
 </style>
 
 </head>
 
 <body>
 
-<header>
+<!-- شاشة البداية -->
 
-<div class="logo">
+<div id="splash">
 
-KAMOHACK STORE
-
-</div>
-
-<input class="search" placeholder="Search Apps...">
-
-</header>
-
-<section class="hero">
+<img src="logo.png" class="logo">
 
 <h1>KAMOHACK STORE</h1>
 
 <p>Premium IPA Library</p>
 
+<div class="loading"></div>
+
+</div>
+
+<!-- الهيدر -->
+
+<header>
+
+<div class="header">
+
+<img src="logo.png" class="header-logo">
+
+<div class="search">
+
+<input type="text"
+placeholder="ابحث عن تطبيق أو لعبة...">
+
+</div>
+
+<button id="darkMode">
+
+🌙
+
+</button>
+
+</div>
+
+</header>
+
+<!-- الأقسام -->
+
+<section class="categories">
+
+<button class="active">الكل</button>
+
+<button>الألعاب</button>
+
+<button>الألعاب المحذوفة</button>
+
+<button>التطبيقات المعدلة</button>
+
+<button>التواصل الاجتماعي</button>
+
+<button>الموسيقى</button>
+
+<button>الفيديو</button>
+
+<button>التصميم</button>
+
+<button>التصوير</button>
+
+<button>الإنتاجية</button>
+
+<button>التعليم</button>
+
+<button>الأدوات</button>
+
+<button>الترفيه</button>
+
+<button>الذكاء الاصطناعي</button>
+
+<button>المطورين</button>
+
+<button>أحدث الإضافات</button>
+
 </section>
+
+<!-- أحدث التطبيقات -->
+
+<section class="title">
+
+<h2>🔥 أحدث التطبيقات</h2>
+
+</section>
+
+<!-- التطبيقات -->
 
 <section class="apps">
 
 <div class="card">
 
-<div class="icon"></div>
+<img src="icons/tiktok.png">
 
-<h2>Scarlet</h2>
+<h3>TikTok</h3>
 
-<p>Install IPA Easily</p>
+<p>الإصدار 41.5</p>
 
-<a href="#" class="download">
+<p>420 MB</p>
 
-DOWNLOAD
+<a href="apps/TikTok.ipa">
 
-</a>
-
-</div>
-
-<div class="card">
-
-<div class="icon"></div>
-
-<h2>TrollStore</h2>
-
-<p>Permanent Installation</p>
-
-<a href="#" class="download">
-
-DOWNLOAD
+تحميل IPA
 
 </a>
 
@@ -261,15 +131,17 @@ DOWNLOAD
 
 <div class="card">
 
-<div class="icon"></div>
+<img src="icons/youtube.png">
 
-<h2>AltStore</h2>
+<h3>YouTube</h3>
 
-<p>IPA Installer</p>
+<p>الإصدار 20.10</p>
 
-<a href="#" class="download">
+<p>180 MB</p>
 
-DOWNLOAD
+<a href="apps/YouTube.ipa">
+
+تحميل IPA
 
 </a>
 
@@ -277,15 +149,17 @@ DOWNLOAD
 
 <div class="card">
 
-<div class="icon"></div>
+<img src="icons/instagram.png">
 
-<h2>ESign</h2>
+<h3>Instagram</h3>
 
-<p>Sign Applications</p>
+<p>الإصدار 390</p>
 
-<a href="#" class="download">
+<p>320 MB</p>
 
-DOWNLOAD
+<a href="apps/Instagram.ipa">
+
+تحميل IPA
 
 </a>
 
@@ -293,11 +167,42 @@ DOWNLOAD
 
 </section>
 
+<!-- الأكثر تحميلاً -->
+
+<section class="title">
+
+<h2>⭐ الأكثر تحميلاً</h2>
+
+</section>
+
+<div class="apps">
+
+<!-- سيتم إضافتها بالجافاسكربت -->
+
+</div>
+
+<!-- زر الدعم -->
+
+<a href="#" class="support">
+
+الدعم الفني
+
+</a>
+
+<!-- الفوتر -->
+
 <footer>
+
+<p>
 
 © 2026 KAMOHACK STORE
 
+</p>
+
 </footer>
 
+<script src="script.js"></script>
+
 </body>
+
 </html>
