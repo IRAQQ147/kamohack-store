@@ -1,0 +1,31 @@
+[
+  {
+    "name": "TikTok",
+    "category": "التواصل الاجتماعي",
+    "version": "41.5",
+    "size": "420 MB",
+    "icon": "icons/tiktok.png",
+    "file": "apps/TikTok.ipa",
+    "description": "تطبيق الفيديوهات القصيرة الشهير."
+  },
+
+  {
+    "name": "YouTube",
+    "category": "الفيديو",
+    "version": "20.10",
+    "size": "180 MB",
+    "icon": "icons/youtube.png",
+    "file": "apps/YouTube.ipa",
+    "description": "مشاهدة ومشاركة الفيديوهات."
+  },
+
+  {
+    "name": "Instagram",
+    "category": "التواصل الاجتماعي",
+    "version": "390",
+    "size": "320 MB",
+    "icon": "icons/instagram.png",
+    "file": "apps/Instagram.ipa",
+    "description": "مشاركة الصور والفيديوهات."
+  }
+]
