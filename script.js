@@ -335,4 +335,62 @@ buttons.forEach(button => {
 
     });
 
+});// ===========================
+// Categories Filter
+// ===========================
+
+let allApps = [];
+
+
+fetch("apps.json")
+.then(response => response.json())
+.then(data => {
+
+    allApps = data;
+
+});
+
+
+
+const buttons = document.querySelectorAll(".categories button");
+
+
+buttons.forEach(button => {
+
+    button.addEventListener("click", function(){
+
+        let selectedCategory = this.innerText;
+
+
+        const cards = document.querySelectorAll(".card");
+
+
+        cards.forEach(card => {
+
+            let category = card.dataset.category;
+
+
+            if(selectedCategory === "الكل"){
+
+                card.style.display = "block";
+
+            }
+
+            else if(category === selectedCategory){
+
+                card.style.display = "block";
+
+            }
+
+            else{
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+
+    });
+
 });
