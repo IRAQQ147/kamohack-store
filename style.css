@@ -18,7 +18,10 @@ body{
 
 /* شاشة البداية */
 
-#splash{
+#splash{ 
+    #splash{
+    display:none !important;
+}
     position:fixed;
     top:0;
     left:0;
